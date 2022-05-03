@@ -1,0 +1,254 @@
+@font-face {
+  font-family: "myFont";
+  src: url("../font/Minimalust Thin.ttf ");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* .visible {
+  opacity: 1;
+  transform: translate(0);
+  transition: all 1s ease-in-out;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-button {
+  width: 100px;
+  height: 100px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #000000;
+}
+
+::-webkit-scrollbar-track {
+  background: #666666;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+
+::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+.main__header {
+  height: 35vh;
+  width: 100%;
+  background-image: url(../img/world.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: all 1s;
+}
+.main__header .imgBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main__header .imgBox .frame {
+  position: absolute;
+  inset: 10px 10px -30px 30px;
+  height: 150px;
+  width: 150px;
+  border: 1px solid rgba(89, 89, 89, 0.563);
+  border-radius: 10px;
+  transition: all 500ms linear;
+  background-color: #00a9a0;
+}
+.main__header .imgBox .text {
+  position: absolute;
+  inset: 10px 30px 0px 15vw;
+  font-weight: normal;
+  font-size: 2.5rem;
+  transition: all 500ms linear;
+  color: #fff;
+}
+.main #app {
+  height: 100vh;
+  transition: all 500ms linear;
+}
+.main #app .title {
+  text-align: center;
+}
+.main #app .flex {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  position: relative;
+}
+.main #app .flex .img {
+  height: 75vh;
+  position: absolute;
+  left: 60%;
+  z-index: 0;
+  opacity: 0;
+  transform: translate(100px);
+}
+.main #app .flex .unorderList {
+  list-style: none;
+  line-height: 5rem;
+  font-size: 1.3rem;
+  z-index: 1;
+  opacity: 0;
+  transform: translate(-100px);
+}
+.main #app .flex .unorderList .itemList {
+  background-color: aqua;
+  margin: 1rem;
+  text-align: center;
+  border-radius: 10px 0 0 10px;
+}
+.main #app .flex .visible {
+  opacity: 1;
+  transform: translate(0);
+  transition: all 1s ease-in-out;
+}
+.main #app .skillGrid {
+  width: 85%;
+  margin: auto;
+  display: grid;
+  gap: 7rem;
+  padding-top: 7rem;
+  grid-template-areas: "html css scss" "js git github";
+  opacity: 0;
+}
+.main #app .skillGrid .skillBox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.main #app .skillGrid .skillBox__img img {
+  height: 25vh;
+}
+.main #app .skillGrid .skillBox__desc {
+  width: 15%;
+  padding-left: 10px;
+}
+.main #app .skillGrid .skillBox__desc p {
+  font-size: 1.3rem;
+  font-weight: 700;
+  width: 15%;
+}
+.main #app .visible {
+  opacity: 1;
+  transform: translate(0);
+  transition: all 1s ease-in-out;
+}
+.main .portfolio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  width: 95%;
+  margin: auto;
+  padding-top: 7rem;
+  position: relative;
+}
+.main .portfolio_image {
+  position: absolute;
+  width: 60%;
+  z-index: 0;
+  transition: 1s all ease;
+}
+.main .portfolio_image img {
+  width: 100%;
+  transition: 1s all ease;
+}
+.main .portfolio_texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 3rem;
+  z-index: 1;
+  position: absolute;
+  right: 0;
+}
+.main .portfolio_texto a {
+  font-size: 62px;
+  letter-spacing: 1.5rem;
+}
+
+.header {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  margin-top: 1rem;
+}
+.header__box__ul {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  list-style: none;
+  margin-right: 1rem;
+}
+.header .button {
+  height: 45px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  position: relative;
+  transition: all 0.5s;
+  z-index: 1;
+  padding: 0.5rem;
+}
+.header .button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.926);
+  z-index: -1;
+  transition: all 0.5s;
+}
+.header .button:hover::before {
+  width: 100%;
+}
+.header .button:hover {
+  color: black;
+}
+.header .button:active:before {
+  background: #b9b9b9;
+}/*# sourceMappingURL=style.css.map */
